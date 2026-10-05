@@ -321,3 +321,152 @@ p {
     grid-template-columns: 2fr 1fr 1fr;
   }
 }
+
+/* ========== 8. ORTAK BÖLÜM STİLLERİ ========== */
+.section {
+  padding-block: var(--space-5);
+}
+
+.section--alt {
+  background-color: var(--cream-200);
+}
+
+.section__head {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto var(--space-4);
+}
+
+.section__more {
+  text-align: center;
+  margin-top: var(--space-4);
+}
+
+.eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--copper-600);
+  margin-bottom: var(--space-1);
+}
+
+/* ========== 9. HERO ========== */
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 80vh;
+  /* Adım 5'te buraya gerçek fotoğraf gelecek */
+  background:
+    linear-gradient(rgba(42, 61, 28, 0.78), rgba(42, 61, 28, 0.88)),
+    linear-gradient(135deg, var(--green-700), var(--green-900));
+  color: var(--cream-100);
+  text-align: center;
+}
+
+.hero h1 {
+  color: var(--cream-100);
+  margin-bottom: var(--space-2);
+}
+
+.hero .eyebrow {
+  color: var(--copper-500);
+}
+
+.hero__content {
+  max-width: 760px;
+}
+
+.hero__lead {
+  color: var(--cream-200);
+  font-size: 1.15rem;
+  margin-bottom: var(--space-3);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  justify-content: center;
+}
+
+.btn--light {
+  background-color: transparent;
+  color: var(--cream-100);
+  border: 2px solid var(--cream-100);
+}
+
+.btn--light:hover {
+  background-color: var(--cream-100);
+  color: var(--green-900);
+}
+
+/* ========== 10. KARTLAR ========== */
+.card-grid {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.card {
+  background-color: var(--white);
+  padding: var(--space-3);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border-top: 4px solid var(--copper-500);
+  transition: transform var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card h3 {
+  margin-bottom: var(--space-1);
+}
+
+.card address {
+  font-style: normal;
+  color: var(--ink-soft);
+}
+
+.bean__origin {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--green-700);
+  background-color: var(--cream-200);
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  margin-bottom: var(--space-1);
+}
+
+/* ========== 11. HİKÂYE BANDI ========== */
+.story {
+  background-color: var(--green-700);
+  color: var(--cream-100);
+  padding-block: var(--space-5);
+  text-align: center;
+}
+
+.story__inner {
+  max-width: 720px;
+}
+
+.story h2 {
+  color: var(--cream-100);
+  margin-bottom: var(--space-2);
+}
+
+.story p {
+  color: var(--cream-200);
+  margin-bottom: var(--space-3);
+}
+
+/* ========== 12. TABLET/MASAÜSTÜ ========== */
+@media (min-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
