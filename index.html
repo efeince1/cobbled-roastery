@@ -12,11 +12,70 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-   <main class="container">
+   <body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <span class="logo__name">The Cobbled Roastery</span>
+        <span class="logo__tag">Thistle Street · Edinburgh</span>
+      </a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle menu">
+      <label for="nav-toggle" class="nav-burger">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
     <h1>Freshly roasted on Thistle Street</h1>
     <p>Small-batch specialty coffee in the heart of Edinburgh.</p>
     <a href="#" class="btn">View our beans</a>
     <a href="#" class="btn btn--outline">Visit us</a>
+  </main>
 
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>The Cobbled Roastery</h3>
+        <p>Ethically sourced, freshly roasted specialty coffee. Small batches, roasted in the shop since 2020.</p>
+      </div>
+
+      <div>
+        <h3>Visit</h3>
+        <address>
+          48 Thistle Street<br>
+          Edinburgh EH2 1EN<br>
+          Scotland
+        </address>
+      </div>
+
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>Student project for a web development course. Not the official website of The Cobbled Roastery.</p>
+    </div>
+  </footer>
 </body>
 </html>
