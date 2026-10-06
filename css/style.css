@@ -521,3 +521,109 @@ p {
     gap: var(--space-2);
   }
 }
+/* ========== 14. SAYFA BAŞLIĞI (iç sayfalar) ========== */
+html {
+  scroll-padding-top: 90px; /* sabit nav'ın altında kalmasın */
+}
+
+.page-hero {
+  background: linear-gradient(135deg, var(--green-700), var(--green-900));
+  text-align: center;
+  padding-block: var(--space-5);
+}
+
+.page-hero h1 {
+  color: var(--cream-100);
+  margin-bottom: var(--space-1);
+}
+
+.page-hero p {
+  color: var(--cream-200);
+  max-width: 560px;
+  margin-inline: auto;
+}
+
+.page-hero .eyebrow {
+  color: var(--copper-500);
+}
+
+/* ========== 15. MENÜ SAYFASI ========== */
+.menu-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-1);
+  margin-bottom: var(--space-5);
+}
+
+.menu-nav a {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  border: 2px solid var(--green-700);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--green-700);
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.menu-nav a:hover {
+  background-color: var(--green-700);
+  color: var(--white);
+}
+
+.menu-block {
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.menu-block + .menu-block {
+  margin-top: var(--space-5);
+}
+
+.menu-block h2 {
+  text-align: center;
+  margin-bottom: var(--space-2);
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-2);
+  padding-block: var(--space-2);
+  border-bottom: 1px dashed rgba(43, 42, 38, 0.25);
+}
+
+.menu-item h3 {
+  font-size: 1.15rem;
+}
+
+.menu-item p {
+  font-size: 0.95rem;
+}
+
+.price {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--copper-600);
+  white-space: nowrap;
+}
+
+.menu-extra {
+  margin-top: var(--space-2);
+  font-size: 0.9rem;
+  font-style: italic;
+  text-align: center;
+}
+
+.note {
+  max-width: 760px;
+  margin: var(--space-4) auto 0;
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--cream-100);
+  border-left: 4px solid var(--copper-500);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+}

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Espresso drinks, filter coffee, pastries and freshly roasted beans at The Cobbled Roastery, Thistle Street, Edinburgh.">
+  <title>Menu | The Cobbled Roastery</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <span class="logo__name">The Cobbled Roastery</span>
+        <span class="logo__tag">Thistle Street · Edinburgh</span>
+      </a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle menu">
+      <label for="nav-toggle" class="nav-burger">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html" aria-current="page">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">La carte</p>
+        <h1>Our menu</h1>
+        <p>Espresso-based drinks, filter coffee, a few pastries from a local bakery and beans roasted in the shop.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <nav class="menu-nav" aria-label="Menu categories">
+          <ul>
+            <li><a href="#espresso">Espresso</a></li>
+            <li><a href="#filter">Filter &amp; more</a></li>
+            <li><a href="#bakery">Pastries</a></li>
+            <li><a href="#beans">Beans</a></li>
+          </ul>
+        </nav>
+
+        <!-- ESPRESSO -->
+        <section id="espresso" class="menu-block">
+          <h2>Espresso drinks</h2>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <div>
+                <h3>Espresso</h3>
+                <p>Short, strong and made from our own roast.</p>
+              </div>
+              <span class="price">£2.60</span>
+            </li>
+            <li class="menu-item">
+              <div>
+                <h3>Americano</h3>
+                <p>Espresso topped up with hot water.</p>
+              </div>
+              <span class="price">£3.00</span>
+            </li>
+            <li class="menu-item">
+              <div>
+                <h3>Flat white</h3>
+                <p>Double espresso with silky microfoam milk, served in a small cup.</p>
+              </div>
+              <span class="price">£3.60</span>
+            </li>
+            <li class="menu-item">
+              <div>
+                <h3>Cappuccino</h3>
+                <p>Espresso with steamed milk and a light layer of foam.</p>
+              </div>
+              <span class="price">£3.60</span>
+            </li>
+            <li class="menu-item">
+              <div>
+                <h3>Latte</h3>
+                <p>Espresso with plenty of steamed milk, smooth and mellow.</p>
+              </div>
+              <span class="price">£3.80</span>
+            </li>
+            <li class="menu-item">
+              <div>
+                <h3>Cortado</h3>
+                <p>A small espresso with an equal amount of steamed milk.</p>
+              </div>
+              <span class="price">£3.40</span>
+            </li>
+          </ul>
+          <p class="menu-extra">Oat or soy milk +£0.30</p>
+        </section>
+
+        <!-- FILTER -->
+        <section id="filter" class="menu-block">
+          <h2>Filter &amp; more</h2>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <div>
+                <h3>Filter coffee</h3>
+                <p>Brewed by hand from the beans of the week.</p>
+              </div>
+              <span class="price">£3.80</span>
+            </li>
+            <li class="menu-item">
+              <div>
+                <h3>Decaf espresso drink</h3>
+                <p>Any espresso drink made with our sugarcane decaf.</p>
+              </div>
+              <span class="price">+£0.30</span>
+            </li>
+            <li class="menu-item">
+              <div>
+                <h3>Hot chocolate</h3>
+                <p>Rich and creamy, for the non-coffee drinkers.</p>
+              </div>
+              <span class="price">£3.80</span>
+            </li>
+            <li class="menu-item">
+              <div>
+                <h3>Loose-leaf tea</h3>
+                <p>A pot of tea, ask at the counter for today's choice.</p>
+              </div>
+              <span class="price">£3.20</span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- PASTRIES -->
+        <section id="bakery" class="menu-block">
+          <h2>Pastries</h2>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <div>
+                <h3>Butter croissant</h3>
+                <p>Flaky and golden, from a local bakery.</p>
+              </div>
+              <span class="price">£3.20</span>
+            </li>
+            <li class="menu-item">
+              <div>
+                <h3>Pain au chocolat</h3>
+                <p>Laminated pastry with dark chocolate.</p>
+              </div>
+              <span class="price">£3.60</span>
+            </li>
+            <li class="menu-item">
+              <div>
+                <h3>Cinnamon swirl</h3>
+                <p>Soft, sticky and best with a flat white.</p>
+              </div>
+              <span class="price">£3.80</span>
+            </li>
+            <li class="menu-item">
+              <div>
+                <h3>Cookie of the day</h3>
+                <p>Ask what's fresh today.</p>
+              </div>
+              <span class="price">£2.80</span>
+            </li>
+          </ul>
+          <p class="menu-extra">Pastry selection changes daily.</p>
+        </section>
+
+      </div>
+    </section>
+
+    <!-- BEANS -->
+    <section id="beans" class="section section--alt">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow">Roasted in the shop</p>
+          <h2>Beans to take home</h2>
+          <p>100% Arabica, ethically sourced and roasted in small batches. Whole bean or ground, prices from £9 to £18 depending on the coffee.</p>
+        </header>
+
+        <div class="card-grid">
+          <article class="card bean">
+            <span class="bean__origin">Brazil</span>
+            <h3>Otavio Reis Yellow Bourbon</h3>
+            <p>Roasted in small batches.</p>
+          </article>
+          <article class="card bean">
+            <span class="bean__origin">Colombia</span>
+            <h3>ACC Attia Castillo</h3>
+            <p>Roasted fresh to order.</p>
+          </article>
+          <article class="card bean">
+            <span class="bean__origin">Costa Rica</span>
+            <h3>Los Cipreses Geisha</h3>
+            <p>A rare Geisha variety.</p>
+          </article>
+          <article class="card bean">
+            <span class="bean__origin">Guatemala</span>
+            <h3>La Bolsa</h3>
+            <p>Roasted in small batches.</p>
+          </article>
+          <article class="card bean">
+            <span class="bean__origin">Kenya</span>
+            <h3>Gatomboya</h3>
+            <p>SL28, SL34 and Ruiru 11 varieties.</p>
+          </article>
+          <article class="card bean">
+            <span class="bean__origin">Colombia</span>
+            <h3>Atunkaa Sugarcane Decaf</h3>
+            <p>Our decaffeinated option.</p>
+          </article>
+        </div>
+
+        <p class="note">
+          Prices on this page are sample prices based on typical Edinburgh specialty cafés. This is a student project, so please check the real menu at the shop or on the official website.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>The Cobbled Roastery</h3>
+        <p>Ethically sourced, freshly roasted specialty coffee. Small batches, roasted in the shop since 2020.</p>
+      </div>
+      <div>
+        <h3>Visit</h3>
+        <address>48 Thistle Street<br>Edinburgh EH2 1EN<br>Scotland</address>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Student project for a web development course. Not the official website of The Cobbled Roastery.</p>
+      <p>Photos from Unsplash by Nathan Dumlao, Mike Kenneally, Toa Heftiba, Tabitha Turner, Nafinia Putra, Alex Azabache, Ross Findlay and Calvin Polen. For illustration only.</p>
+    </div>
+  </footer>
+</body>
+</html>
