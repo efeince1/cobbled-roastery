@@ -860,3 +860,210 @@ html {
     scroll-behavior: auto !important;
   }
 }
+/* ========== 20. İLETİŞİM SAYFASI ========== */
+.contact-grid {
+  display: grid;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.contact-info h2 {
+  margin-bottom: var(--space-2);
+}
+
+.contact-info address {
+  font-style: normal;
+  margin-bottom: var(--space-3);
+  color: var(--ink-soft);
+}
+
+.contact-info > p {
+  margin-bottom: var(--space-2);
+}
+
+/* Çalışma saatleri tablosu */
+.hours {
+  width: 100%;
+  margin-bottom: var(--space-1);
+  border-collapse: collapse;
+  background-color: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.hours caption {
+  /* Başlık ekran okuyucular için var, görsel olarak gizli */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+.hours th,
+.hours td {
+  padding: 0.8rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--cream-200);
+}
+
+.hours thead th {
+  background-color: var(--green-900);
+  color: var(--cream-100);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.hours tbody th {
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.hours tbody tr:last-child th,
+.hours tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.hours__note {
+  font-size: 0.85rem;
+  margin-bottom: var(--space-3);
+}
+
+/* Harita */
+.map {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.map iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border: 0;
+}
+
+/* ========== 21. FORM ========== */
+.form {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background-color: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border-top: 4px solid var(--copper-500);
+}
+
+.field {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.field label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--green-900);
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font: inherit;
+  color: var(--ink);
+  background-color: var(--cream-100);
+  border: 2px solid var(--cream-200);
+  border-radius: var(--radius);
+  transition: border-color var(--transition), background-color var(--transition);
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  background-color: var(--white);
+  border-color: var(--green-700);
+}
+
+/* Geçersiz alan: sadece kullanıcı yazıp bıraktıktan sonra kırmızı olur */
+.field input:user-invalid,
+.field textarea:user-invalid {
+  border-color: #b3261e;
+}
+
+/* <button> için .btn düzeltmesi */
+button.btn {
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.note--small {
+  max-width: none;
+  margin-top: var(--space-3);
+}
+
+/* ========== 22. SSS (details/summary) ========== */
+.faq {
+  max-width: 760px;
+  margin-inline: auto;
+  display: grid;
+  gap: var(--space-1);
+}
+
+.faq details {
+  background-color: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.faq summary {
+  position: relative;
+  padding: var(--space-2) 3rem var(--space-2) var(--space-3);
+  font-weight: 700;
+  color: var(--green-900);
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+/* + işareti, açılınca − olur */
+.faq summary::after {
+  content: "+";
+  position: absolute;
+  right: var(--space-3);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: var(--copper-500);
+}
+
+.faq details[open] summary::after {
+  content: "\2212";
+}
+
+.faq details[open] summary {
+  color: var(--copper-600);
+}
+
+.faq details p {
+  padding: 0 var(--space-3) var(--space-3);
+}

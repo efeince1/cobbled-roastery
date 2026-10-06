@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Find The Cobbled Roastery at 48 Thistle Street, Edinburgh. Opening hours, map, contact form and answers to common questions.">
+  <title>Contact | The Cobbled Roastery</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <span class="logo__name">The Cobbled Roastery</span>
+        <span class="logo__tag">Thistle Street · Edinburgh</span>
+      </a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle menu">
+      <label for="nav-toggle" class="nav-burger">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Visit us</p>
+        <h1>Find the little shop on Thistle Street</h1>
+        <p>Pop in for a coffee, pick up a bag of beans or get in touch with a question.</p>
+      </div>
+    </section>
+
+    <!-- BİLGİ + HARİTA -->
+    <section class="section">
+      <div class="container contact-grid">
+
+        <div class="contact-info">
+          <h2>Opening hours &amp; address</h2>
+
+          <address>
+            <strong>The Cobbled Roastery</strong><br>
+            48 Thistle Street<br>
+            Edinburgh EH2 1EN<br>
+            Scotland
+          </address>
+
+          <table class="hours">
+            <caption>Opening hours</caption>
+            <thead>
+              <tr>
+                <th scope="col">Day</th>
+                <th scope="col">Hours</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Monday – Friday</th>
+                <td>08:00 – 16:00</td>
+              </tr>
+              <tr>
+                <th scope="row">Saturday</th>
+                <td>09:00 – 16:00</td>
+              </tr>
+              <tr>
+                <th scope="row">Sunday</th>
+                <td>Please check before visiting</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="hours__note">Hours can change, so check the official website or Google Maps before you go.</p>
+
+          <p>
+            <a href="https://cobbledroaster.co.uk" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Official website</a>
+          </p>
+        </div>
+
+        <div class="map">
+          <iframe
+            title="Map showing The Cobbled Roastery at 48 Thistle Street, Edinburgh"
+            src="https://maps.google.com/maps?q=48%20Thistle%20Street%2C%20Edinburgh%20EH2%201EN&amp;output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FORM -->
+    <section class="section section--alt">
+      <div class="container contact-grid">
+
+        <div class="contact-info">
+          <p class="eyebrow">Say hello</p>
+          <h2>Send us a message</h2>
+          <p>Questions about beans, wholesale or visiting? Fill in the form and we'll point you in the right direction.</p>
+          <p class="note note--small">This is a demo form for a student project. It does not send any message. To contact the real shop, please use the official website.</p>
+        </div>
+
+        <form class="form" action="#" method="post">
+          <div class="field">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" autocomplete="name" placeholder="e.g. Jamie Smith" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="jamie@example.com" required>
+          </div>
+
+          <div class="field">
+            <label for="topic">What's it about?</label>
+            <select id="topic" name="topic">
+              <option value="general">General question</option>
+              <option value="beans">Buying beans</option>
+              <option value="wholesale">Wholesale roasting</option>
+              <option value="feedback">Feedback</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" minlength="10" placeholder="How can we help?" required></textarea>
+          </div>
+
+          <button type="submit" class="btn">Send message</button>
+        </form>
+
+      </div>
+    </section>
+
+    <!-- SSS -->
+    <section class="section">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow">Good to know</p>
+          <h2>Frequently asked questions</h2>
+        </header>
+
+        <div class="faq">
+          <details>
+            <summary>Do you roast the coffee in the shop?</summary>
+            <p>Yes. The coffee is roasted in small batches on site, so the beans are fresh when they reach your cup or your bag.</p>
+          </details>
+          <details>
+            <summary>Can I buy beans to take home?</summary>
+            <p>Yes. A range of single-origin coffees is available, as well as a decaf and a selection box. You can buy them in the shop or on the official website.</p>
+          </details>
+          <details>
+            <summary>Do you offer wholesale roasting for businesses?</summary>
+            <p>Yes. Cafés and other businesses can order roasted coffee. Check the wholesale page on the official website for details.</p>
+          </details>
+          <details>
+            <summary>Is there room to sit?</summary>
+            <p>The shop is small, with limited seating and a window seat that looks out on Thistle Street. It can be a good idea to come at a quieter time if you want to stay a while.</p>
+          </details>
+          <details>
+            <summary>Which payment methods do you accept?</summary>
+            <p>Cards, contactless and Apple Pay are accepted.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>The Cobbled Roastery</h3>
+        <p>Ethically sourced, freshly roasted specialty coffee. Small batches, roasted in the shop since 2020.</p>
+      </div>
+      <div>
+        <h3>Visit</h3>
+        <address>48 Thistle Street<br>Edinburgh EH2 1EN<br>Scotland</address>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Student project for a web development course. Not the official website of The Cobbled Roastery.</p>
+      <p>Photos from Unsplash by Nathan Dumlao, Mike Kenneally, Toa Heftiba, Tabitha Turner, Nafinia Putra, Alex Azabache, Ross Findlay and Calvin Polen. For illustration only.</p>
+    </div>
+  </footer>
+</body>
+</html>
