@@ -627,3 +627,236 @@ html {
   border-radius: var(--radius);
   font-size: 0.9rem;
 }
+/* ========== 16. HAKKIMIZDA SAYFASI ========== */
+
+/* Yan yana bölümde görseli/yazıyı ters çevirme (masaüstü) */
+.split__media--tall img {
+  aspect-ratio: 3 / 4;
+  max-height: 560px;
+}
+
+.split__text p + p {
+  margin-top: var(--space-2);
+}
+
+@media (min-width: 768px) {
+  .split--reverse .split__media {
+    order: 2;
+  }
+}
+
+/* Zaman çizelgesi */
+.timeline {
+  position: relative;
+  max-width: 640px;
+  margin-inline: auto;
+  padding-left: var(--space-4);
+  border-left: 3px solid var(--copper-500);
+  list-style: none;
+}
+
+.timeline li {
+  position: relative;
+  padding-bottom: var(--space-4);
+}
+
+.timeline li:last-child {
+  padding-bottom: 0;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: calc(-1 * var(--space-4) - 10px);
+  top: 0.3rem;
+  width: 17px;
+  height: 17px;
+  background-color: var(--copper-500);
+  border: 3px solid var(--cream-200);
+  border-radius: 50%;
+}
+
+.timeline__date {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--copper-600);
+}
+
+/* Numaralı adımlar (CSS counter) */
+.steps {
+  list-style: none;
+  counter-reset: step;
+  display: grid;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.steps li {
+  counter-increment: step;
+  display: flex;
+  gap: var(--space-2);
+  align-items: flex-start;
+}
+
+.steps li::before {
+  content: counter(step);
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  background-color: var(--green-700);
+  color: var(--white);
+  font-weight: 700;
+  border-radius: 50%;
+}
+
+.steps strong {
+  color: var(--green-900);
+}
+
+/* İki fotoğraf yan yana */
+.duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2);
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.duo img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+/* ========== 17. GALERİ ========== */
+
+/* Masonry benzeri düzen: CSS sütunları */
+.gallery {
+  columns: 2;
+  column-gap: var(--space-2);
+}
+
+.gallery__item {
+  display: block;
+  margin-bottom: var(--space-2);
+  break-inside: avoid;
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.gallery__item img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.gallery__item:hover img,
+.gallery__item:focus-visible img {
+  transform: scale(1.06);
+  filter: brightness(1.08);
+}
+
+@media (min-width: 768px) {
+  .gallery {
+    columns: 3;
+  }
+}
+
+/* ========== 18. LIGHTBOX (JS'siz, :target ile) ========== */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3);
+  background-color: rgba(17, 22, 12, 0.93);
+}
+
+.lightbox:target {
+  display: flex;
+  animation: fade-in 0.25s ease;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Görselin dışına tıklayınca kapanması için tüm ekranı kaplayan link */
+.lightbox__backdrop {
+  position: absolute;
+  inset: 0;
+  cursor: zoom-out;
+}
+
+.lightbox figure {
+  position: relative;
+  max-width: min(92vw, 1000px);
+  text-align: center;
+}
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 80vh;
+  margin-inline: auto;
+  object-fit: contain;
+  border-radius: var(--radius);
+}
+
+.lightbox figcaption {
+  padding-top: var(--space-1);
+  font-size: 0.9rem;
+  color: var(--cream-200);
+}
+
+.lightbox__close,
+.lightbox__nav {
+  position: absolute;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  font-size: 2.2rem;
+  line-height: 1;
+  color: var(--cream-100);
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  transition: background-color var(--transition);
+}
+
+.lightbox__close:hover,
+.lightbox__nav:hover {
+  background-color: var(--copper-500);
+}
+
+.lightbox__close {
+  top: var(--space-2);
+  right: var(--space-2);
+}
+
+.lightbox__nav {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox__nav--prev { left: var(--space-1); }
+.lightbox__nav--next { right: var(--space-1); }
+
+/* ========== 19. HAREKET HASSASİYETİ ========== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

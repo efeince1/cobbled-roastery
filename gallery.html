@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A look at the coffee, the roastery and the Edinburgh streets around The Cobbled Roastery.">
+  <title>Gallery | The Cobbled Roastery</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <span class="logo__name">The Cobbled Roastery</span>
+        <span class="logo__tag">Thistle Street · Edinburgh</span>
+      </a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle menu">
+      <label for="nav-toggle" class="nav-burger">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Gallery</p>
+        <h1>Coffee, craft and cobbles</h1>
+        <p>A few moments from the cup, the roaster and the streets of Edinburgh. Click a photo to enlarge it.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <div id="gallery-grid" class="gallery">
+
+          <a href="#photo-1" class="gallery__item">
+            <img src="images/gallery/cafe-interior.webp"
+                 alt="A bright café counter with hanging bulbs, grinders and an espresso machine"
+                 width="1600" height="900" loading="lazy">
+          </a>
+          <a href="#photo-2" class="gallery__item">
+            <img src="images/gallery/latte-cup.webp"
+                 alt="A latte with leaf-shaped milk art in a white cup"
+                 width="1000" height="1332" loading="lazy">
+          </a>
+          <a href="#photo-3" class="gallery__item">
+            <img src="images/gallery/espresso-pour.webp"
+                 alt="Espresso pouring from a portafilter into a small glass"
+                 width="1000" height="1500" loading="lazy">
+          </a>
+          <a href="#photo-4" class="gallery__item">
+            <img src="images/gallery/roaster-cooling-tray.webp"
+                 alt="Roasted coffee beans being stirred in a roaster's cooling tray"
+                 width="1600" height="1067" loading="lazy">
+          </a>
+          <a href="#photo-5" class="gallery__item">
+            <img src="images/gallery/edinburgh-castle.webp"
+                 alt="Edinburgh Castle on its rock seen from a stone stairway"
+                 width="1000" height="1498" loading="lazy">
+          </a>
+          <a href="#photo-6" class="gallery__item">
+            <img src="images/gallery/latte-art-beans.webp"
+                 alt="Heart-shaped latte art surrounded by roasted coffee beans"
+                 width="1000" height="1500" loading="lazy">
+          </a>
+          <a href="#photo-7" class="gallery__item">
+            <img src="images/gallery/window-view.webp"
+                 alt="A café window looking out over a rainy cobbled street in Edinburgh"
+                 width="1000" height="1500" loading="lazy">
+          </a>
+          <a href="#photo-8" class="gallery__item">
+            <img src="images/gallery/edinburgh-skyline.webp"
+                 alt="Edinburgh's rooftops and spires at sunset under a cloudy pink sky"
+                 width="1000" height="1500" loading="lazy">
+          </a>
+          <a href="#photo-9" class="gallery__item">
+            <img src="images/hero/hero-beans.webp"
+                 alt="Close-up of freshly roasted coffee beans"
+                 width="1920" height="1464" loading="lazy">
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- LIGHTBOX'LAR (saf CSS, :target ile açılır) -->
+
+    <div id="photo-1" class="lightbox" role="dialog" aria-label="Photo 1 of 9">
+      <a href="#gallery-grid" class="lightbox__backdrop" aria-label="Close photo"></a>
+      <a href="#photo-9" class="lightbox__nav lightbox__nav--prev" aria-label="Previous photo">&#8249;</a>
+      <figure>
+        <img src="images/gallery/cafe-interior.webp" alt="A bright café counter with hanging bulbs, grinders and an espresso machine">
+        <figcaption>A café counter. Photo: Nafinia Putra / Unsplash</figcaption>
+      </figure>
+      <a href="#photo-2" class="lightbox__nav lightbox__nav--next" aria-label="Next photo">&#8250;</a>
+      <a href="#gallery-grid" class="lightbox__close" aria-label="Close photo">&times;</a>
+    </div>
+
+    <div id="photo-2" class="lightbox" role="dialog" aria-label="Photo 2 of 9">
+      <a href="#gallery-grid" class="lightbox__backdrop" aria-label="Close photo"></a>
+      <a href="#photo-1" class="lightbox__nav lightbox__nav--prev" aria-label="Previous photo">&#8249;</a>
+      <figure>
+        <img src="images/gallery/latte-cup.webp" alt="A latte with leaf-shaped milk art in a white cup">
+        <figcaption>Latte art. Photo: Tabitha Turner / Unsplash</figcaption>
+      </figure>
+      <a href="#photo-3" class="lightbox__nav lightbox__nav--next" aria-label="Next photo">&#8250;</a>
+      <a href="#gallery-grid" class="lightbox__close" aria-label="Close photo">&times;</a>
+    </div>
+
+    <div id="photo-3" class="lightbox" role="dialog" aria-label="Photo 3 of 9">
+      <a href="#gallery-grid" class="lightbox__backdrop" aria-label="Close photo"></a>
+      <a href="#photo-2" class="lightbox__nav lightbox__nav--prev" aria-label="Previous photo">&#8249;</a>
+      <figure>
+        <img src="images/gallery/espresso-pour.webp" alt="Espresso pouring from a portafilter into a small glass">
+        <figcaption>An espresso pour. Photo: Nathan Dumlao / Unsplash</figcaption>
+      </figure>
+      <a href="#photo-4" class="lightbox__nav lightbox__nav--next" aria-label="Next photo">&#8250;</a>
+      <a href="#gallery-grid" class="lightbox__close" aria-label="Close photo">&times;</a>
+    </div>
+
+    <div id="photo-4" class="lightbox" role="dialog" aria-label="Photo 4 of 9">
+      <a href="#gallery-grid" class="lightbox__backdrop" aria-label="Close photo"></a>
+      <a href="#photo-3" class="lightbox__nav lightbox__nav--prev" aria-label="Previous photo">&#8249;</a>
+      <figure>
+        <img src="images/gallery/roaster-cooling-tray.webp" alt="Roasted coffee beans being stirred in a roaster's cooling tray">
+        <figcaption>Beans in a roaster's cooling tray. Photo: Calvin Polen / Unsplash</figcaption>
+      </figure>
+      <a href="#photo-5" class="lightbox__nav lightbox__nav--next" aria-label="Next photo">&#8250;</a>
+      <a href="#gallery-grid" class="lightbox__close" aria-label="Close photo">&times;</a>
+    </div>
+
+    <div id="photo-5" class="lightbox" role="dialog" aria-label="Photo 5 of 9">
+      <a href="#gallery-grid" class="lightbox__backdrop" aria-label="Close photo"></a>
+      <a href="#photo-4" class="lightbox__nav lightbox__nav--prev" aria-label="Previous photo">&#8249;</a>
+      <figure>
+        <img src="images/gallery/edinburgh-castle.webp" alt="Edinburgh Castle on its rock seen from a stone stairway">
+        <figcaption>Edinburgh Castle. Photo: Ross Findlay / Unsplash</figcaption>
+      </figure>
+      <a href="#photo-6" class="lightbox__nav lightbox__nav--next" aria-label="Next photo">&#8250;</a>
+      <a href="#gallery-grid" class="lightbox__close" aria-label="Close photo">&times;</a>
+    </div>
+
+    <div id="photo-6" class="lightbox" role="dialog" aria-label="Photo 6 of 9">
+      <a href="#gallery-grid" class="lightbox__backdrop" aria-label="Close photo"></a>
+      <a href="#photo-5" class="lightbox__nav lightbox__nav--prev" aria-label="Previous photo">&#8249;</a>
+      <figure>
+        <img src="images/gallery/latte-art-beans.webp" alt="Heart-shaped latte art surrounded by roasted coffee beans">
+        <figcaption>Latte among the beans. Photo: Unsplash</figcaption>
+      </figure>
+      <a href="#photo-7" class="lightbox__nav lightbox__nav--next" aria-label="Next photo">&#8250;</a>
+      <a href="#gallery-grid" class="lightbox__close" aria-label="Close photo">&times;</a>
+    </div>
+
+    <div id="photo-7" class="lightbox" role="dialog" aria-label="Photo 7 of 9">
+      <a href="#gallery-grid" class="lightbox__backdrop" aria-label="Close photo"></a>
+      <a href="#photo-6" class="lightbox__nav lightbox__nav--prev" aria-label="Previous photo">&#8249;</a>
+      <figure>
+        <img src="images/gallery/window-view.webp" alt="A café window looking out over a rainy cobbled street in Edinburgh">
+        <figcaption>A window seat over the street. Photo: Toa Heftiba / Unsplash</figcaption>
+      </figure>
+      <a href="#photo-8" class="lightbox__nav lightbox__nav--next" aria-label="Next photo">&#8250;</a>
+      <a href="#gallery-grid" class="lightbox__close" aria-label="Close photo">&times;</a>
+    </div>
+
+    <div id="photo-8" class="lightbox" role="dialog" aria-label="Photo 8 of 9">
+      <a href="#gallery-grid" class="lightbox__backdrop" aria-label="Close photo"></a>
+      <a href="#photo-7" class="lightbox__nav lightbox__nav--prev" aria-label="Previous photo">&#8249;</a>
+      <figure>
+        <img src="images/gallery/edinburgh-skyline.webp" alt="Edinburgh's rooftops and spires at sunset under a cloudy pink sky">
+        <figcaption>Edinburgh at sunset. Photo: Alex Azabache / Unsplash</figcaption>
+      </figure>
+      <a href="#photo-9" class="lightbox__nav lightbox__nav--next" aria-label="Next photo">&#8250;</a>
+      <a href="#gallery-grid" class="lightbox__close" aria-label="Close photo">&times;</a>
+    </div>
+
+    <div id="photo-9" class="lightbox" role="dialog" aria-label="Photo 9 of 9">
+      <a href="#gallery-grid" class="lightbox__backdrop" aria-label="Close photo"></a>
+      <a href="#photo-8" class="lightbox__nav lightbox__nav--prev" aria-label="Previous photo">&#8249;</a>
+      <figure>
+        <img src="images/hero/hero-beans.webp" alt="Close-up of freshly roasted coffee beans">
+        <figcaption>Freshly roasted beans. Photo: Mike Kenneally / Unsplash</figcaption>
+      </figure>
+      <a href="#photo-1" class="lightbox__nav lightbox__nav--next" aria-label="Next photo">&#8250;</a>
+      <a href="#gallery-grid" class="lightbox__close" aria-label="Close photo">&times;</a>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>The Cobbled Roastery</h3>
+        <p>Ethically sourced, freshly roasted specialty coffee. Small batches, roasted in the shop since 2020.</p>
+      </div>
+      <div>
+        <h3>Visit</h3>
+        <address>48 Thistle Street<br>Edinburgh EH2 1EN<br>Scotland</address>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Student project for a web development course. Not the official website of The Cobbled Roastery.</p>
+      <p>Photos from Unsplash by Nathan Dumlao, Mike Kenneally, Toa Heftiba, Tabitha Turner, Nafinia Putra, Alex Azabache, Ross Findlay and Calvin Polen. For illustration only.</p>
+    </div>
+  </footer>
+</body>
+</html>
