@@ -1067,3 +1067,84 @@ button.btn {
 .faq details p {
   padding: 0 var(--space-3) var(--space-3);
 }
+/* ========== 23. RESPONSIVE DÜZELTMELER ========== */
+
+/* Fotoğraflar: HTML'deki height="..." özniteliği,
+   CSS'teki aspect-ratio'yu ezip görseli aşırı uzatmasın */
+img {
+  height: auto;
+}
+
+/* Kapalı mobil menüdeki linklere klavye (Tab) ile ulaşılmasın */
+.nav-links {
+  visibility: hidden;
+  transition: max-height 0.35s ease, visibility 0.35s;
+}
+
+.nav-toggle:checked ~ .nav-links {
+  visibility: visible;
+}
+
+/* Tablet ve üstü */
+@media (min-width: 768px) {
+  .nav-links {
+    visibility: visible;
+  }
+
+  /* Nav linkleri orta genişlikte sıkışmasın */
+  .nav-links ul {
+    gap: clamp(1rem, 2.5vw, 2rem);
+  }
+}
+
+/* Küçük telefonlar */
+@media (max-width: 480px) {
+  .logo__name {
+    font-size: 1.1rem;
+  }
+
+  .logo__tag {
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+  }
+
+  .hero {
+    min-height: 70vh;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .form {
+    padding: var(--space-3);
+  }
+}
+
+/* Lightbox: telefonda oklar fotoğrafın üstüne binmesin, altta dursun */
+@media (max-width: 600px) {
+  .lightbox img {
+    max-height: 68vh;
+  }
+
+  .lightbox__nav {
+    top: auto;
+    bottom: var(--space-3);
+    transform: none;
+  }
+
+  .lightbox__nav--prev {
+    left: calc(50% - 3.5rem);
+  }
+
+  .lightbox__nav--next {
+    right: calc(50% - 3.5rem);
+  }
+}
+
+/* Footer linkleri parmakla basılabilecek kadar büyük olsun */
+.site-footer li a {
+  display: inline-block;
+  padding-block: 0.25rem;
+}
