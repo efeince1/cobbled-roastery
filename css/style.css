@@ -356,12 +356,10 @@ p {
   display: flex;
   align-items: center;
   min-height: 80vh;
-  /* Adım 5'te buraya gerçek fotoğraf gelecek */
+    background-color: var(--green-900);
   background:
     linear-gradient(rgba(42, 61, 28, 0.78), rgba(42, 61, 28, 0.88)),
-    linear-gradient(135deg, var(--green-700), var(--green-900));
-  color: var(--cream-100);
-  text-align: center;
+    url("../images/hero/hero-beans.webp") center / cover no-repeat;
 }
 
 .hero h1 {
@@ -444,7 +442,10 @@ p {
 
 /* ========== 11. HİKÂYE BANDI ========== */
 .story {
-  background-color: var(--green-700);
+    background-color: var(--green-700);
+  background:
+    linear-gradient(rgba(42, 61, 28, 0.85), rgba(42, 61, 28, 0.85)),
+    url("../images/gallery/window-view.webp") center / cover no-repeat;
   color: var(--cream-100);
   padding-block: var(--space-5);
   text-align: center;
@@ -468,5 +469,55 @@ p {
 @media (min-width: 768px) {
   .card-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* ========== 13. YAN YANA BÖLÜM VE GALERİ ÖNİZLEME ========== */
+.split {
+  display: grid;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+.split__media img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.split__text h2 {
+  margin-bottom: var(--space-2);
+}
+
+.split__text p:not(.eyebrow) {
+  margin-bottom: var(--space-3);
+}
+
+.teaser {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-1);
+}
+
+.teaser img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: var(--radius);
+  transition: transform var(--transition);
+}
+
+.teaser img:hover {
+  transform: scale(1.03);
+}
+
+@media (min-width: 768px) {
+  .split {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .teaser {
+    gap: var(--space-2);
   }
 }
