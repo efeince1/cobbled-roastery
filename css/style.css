@@ -7,6 +7,8 @@
   --cream-200: #ece3d0;
   --copper-500: #b87333;
   --copper-600: #9c5f27;
+    --copper-300: #e0a46a; 
+  --copper-700: #7f4c1e; 
   --ink: #2b2a26;
   --ink-soft: #5d5a52;
   --white: #ffffff;
@@ -1147,4 +1149,86 @@ img {
 .site-footer li a {
   display: inline-block;
   padding-block: 0.25rem;
+}
+/* ========== 24. KONTRAST DÜZELTMELERİ ========== */
+.btn {
+  background-color: var(--copper-600);   /* beyaz yazıyla 5.1:1 */
+}
+
+.btn:hover {
+  background-color: var(--copper-700);
+}
+
+.eyebrow,
+.timeline__date {
+  color: var(--copper-700);               /* açık zeminde 5.5:1 */
+}
+
+.hero .eyebrow,
+.page-hero .eyebrow,
+.logo__tag {
+  color: var(--copper-300);               /* koyu zeminde 5:1+ */
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current="page"],
+.site-footer a:hover {
+  color: var(--copper-300);
+}
+/* ========== 25. CİLA ========== */
+
+/* Metin seçince marka renkleri */
+::selection {
+  background-color: var(--copper-500);
+  color: var(--white);
+}
+
+/* Bölümler kaydırınca yumuşakça belirsin (JS yok, destekleyen tarayıcılarda) */
+@supports (animation-timeline: view()) {
+  .section__head,
+  .card,
+  .split__media,
+  .split__text,
+  .timeline li,
+  .menu-item,
+  .faq details {
+    animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 35%;
+  }
+
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+/* Kartlarda hover geçişi ile reveal çakışmasın */
+.card {
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+  box-shadow: 0 12px 28px rgba(42, 61, 28, 0.2);
+}
+
+/* Yazdırma: nav, footer ve harita çıkmasın */
+@media print {
+  .site-header,
+  .site-footer,
+  .map,
+  .skip-link {
+    display: none;
+  }
+
+  body {
+    background: none;
+    color: #000;
+  }
 }
